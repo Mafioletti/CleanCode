@@ -37,7 +37,7 @@ src/
  ├── Computador.java    # Subclasse de Dispositivo
  ├── Impressora.java    # Subclasse de Dispositivo
  └── Roteador.java      # Subclasse de Dispositivo
-
+```
 ## 🧠 Princípios de Clean Code Aplicados
 
 1. **Nomes Significativos e Intuitivos (*Meaningful Names*):**
