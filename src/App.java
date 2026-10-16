@@ -88,11 +88,11 @@ public class App {
     
     
     public static void listarDispositivos(){
+        if(dispositivos.isEmpty()){
+            System.out.println("Não existem dispotitivos cadastrados");
+        }
         for (Dispositivo dispositivo : dispositivos) {
-            if(dispositivos.isEmpty()){
-                System.out.println("Não existem dispotitivos cadastrados");
-            }
-            dispositivo.exibirDispositivo();
+                dispositivo.exibirDispositivo();
         }
     }
     public static void ligarDispositivo(){
@@ -100,30 +100,30 @@ public class App {
             for (Dispositivo dispositivo : dispositivos) {
                 if (dispositivo.getCodigo().equals(codigoLigar)){
                     dispositivo.ligar();
-                } else {
-                    System.out.println("Dispositivo não encontrado");
+                    return;
                 }
             }
+            System.out.println("Dispositivo não encontrado");
         }
     public static void desligarDispositivo(){
         String codigoDesligar = lerTexto("Digite o código do dispositivo: ");
             for (Dispositivo dispositivo : dispositivos) {
                 if (dispositivo.getCodigo().equals(codigoDesligar)){
                     dispositivo.desligar();
-                } else {
-                    System.out.println("Dispositivo não encontrado");
+                    return;
                 }
             }
+            System.out.println("Dispositivo não encontrado");
         }
     public static void buscarDispositivo(){
         String codigoBusca = lerTexto("Digite o código do dispositivo: ");
             for (Dispositivo dispositivo : dispositivos) {
                 if (dispositivo.getCodigo().equals(codigoBusca)){
                     dispositivo.exibirDispositivo();
-                } else {
-                    System.out.println("Dispositivo não encontrado");
+                    return;
                 }
             }
+            System.out.println("Dispositivo não encontrado");
         }
     public static void sairSistema(){
     }
@@ -146,6 +146,7 @@ public class App {
     }
     //////////////////////////////////////////////////////////////////////////////////////
     public static void exibirMenu(){
+        System.out.println("=== MENU DE OPÇÕES DA LOJA ===\n");
         System.out.println("1. Cadastrar Computador");
         System.out.println("2. Cadastrar Impressora");
         System.out.println("3. Cadastrar Roteador");
