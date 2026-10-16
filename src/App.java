@@ -86,7 +86,6 @@ public class App {
         dispositivos.add(roteador);
     }
     
-    
     public static void listarDispositivos(){
         if(dispositivos.isEmpty()){
             System.out.println("Não existem dispotitivos cadastrados");
@@ -95,6 +94,7 @@ public class App {
                 dispositivo.exibirDispositivo();
         }
     }
+    
     public static void ligarDispositivo(){
         String codigoLigar = lerTexto("Digite o código do dispositivo: ");
             for (Dispositivo dispositivo : dispositivos) {
@@ -104,7 +104,8 @@ public class App {
                 }
             }
             System.out.println("Dispositivo não encontrado");
-        }
+    }
+    
     public static void desligarDispositivo(){
         String codigoDesligar = lerTexto("Digite o código do dispositivo: ");
             for (Dispositivo dispositivo : dispositivos) {
@@ -114,7 +115,8 @@ public class App {
                 }
             }
             System.out.println("Dispositivo não encontrado");
-        }
+    }
+    
     public static void buscarDispositivo(){
         String codigoBusca = lerTexto("Digite o código do dispositivo: ");
             for (Dispositivo dispositivo : dispositivos) {
@@ -124,9 +126,8 @@ public class App {
                 }
             }
             System.out.println("Dispositivo não encontrado");
-        }
-    public static void sairSistema(){
     }
+    
     //////////////////////////////////////////////////////////////////////////////////
     private static String lerTexto(String mensagem){
         System.out.println(mensagem);
@@ -145,6 +146,7 @@ public class App {
         return valor;
     }
     //////////////////////////////////////////////////////////////////////////////////////
+    
     public static void exibirMenu(){
         System.out.println("=== MENU DE OPÇÕES DA LOJA ===\n");
         System.out.println("1. Cadastrar Computador");
