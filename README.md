@@ -54,11 +54,3 @@ src/
 
 5. **Código Autoexplicativo (*Self-Documenting Code*):**
    - A estrutura e a clareza dos nomes reduzem a necessidade de comentários explicativos, mantendo a leitura limpa e direta.
-
----
-
-## 💡 Oportunidades de Melhoria (Refatoração)
-
-- **Ajuste na Busca por Código:** Ajustar a lógica nos métodos de busca (`buscarDispositivo`, `ligarDispositivo`, `desligarDispositivo`) para evitar a impressão repetida da mensagem `"Dispositivo não encontrado"` a cada iteração do laço `for`.
-- **Validação de Lista Vazia:** Mover a verificação `dispositivos.isEmpty()` para antes do laço `for` no método `listarDispositivos()`.
-- **Cálculo de Estatísticas:** Incrementar os contadores de cada tipo de dispositivo durante o cadastro para garantir que o método `exibirRelatorio()` exiba os percentuais corretos ao final.
